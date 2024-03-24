@@ -4,7 +4,7 @@ using namespace std;
 int Diff(int a, int b);
 int Prod(int a, int b);
 double Quote(int a, int b);
-int Sum(int a, int b); // Прототип функции (Объявление функции - function declaration)
+int Sum(int a, int b,int c=0); // Прототип функции (Объявление функции - function declaration)
 long long int Factorial(int n);
 double Power(double a, int n);
 
