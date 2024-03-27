@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 
 #define tab "\t"
@@ -19,9 +19,9 @@ void main()
 	int minRand, maxRand;
 	do
 	{
-		cout << "Ââåäèòå ìèíèìàëüíîe âîçìîæíîå ñëó÷àéíîå ÷èñëî:"; cin >> minRand;
-		cout << "Ââåäèòå ìàêñèìàëüíîå âîçìîæíîå ñëó÷àéíîå ÷èñëî:"; cin >> maxRand;
-		if (minRand == maxRand)cout << "Ïðåäåëû äèîïàçîíà íå äîëæíû ñîâïàäàòü:" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾e Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾Ðµ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾:"; cin >> minRand;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾Ðµ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾:"; cin >> maxRand;
+		if (minRand == maxRand)cout << "ÐŸÑ€ÐµÐ´ÐµÐ»Ñ‹ Ð´Ð¸Ð¾Ð¿Ð°Ð·Ð¾Ð½Ð° Ð½Ðµ Ð´Ð¾Ð»Ð¶Ð½Ñ‹ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°Ñ‚ÑŒ:" << endl;
 	} while (minRand == maxRand);
 
 
@@ -29,9 +29,9 @@ void main()
 	int minRand, maxRand;
 	do
 	{
-		cout << "Ââåäèòå ìèíèìàëüíîå âîçìîæíîå ñëó÷àéíîå ÷èñëî:"; cin >> minRand;
-		cout << "Ââåäèòå ìàêñèìàëüíî âîçìîæíîå ñëó÷àéíîå ÷èñëî:"; cin >> maxRand;
-		if (minRand == maxRand)cout << "Ïðåäåëû äèîïàçîíà íå äîëæíû ñîâïàäàòü" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾Ðµ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾:"; cin >> minRand;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾Ðµ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾:"; cin >> maxRand;
+		if (minRand == maxRand)cout << "ÐŸÑ€ÐµÐ´ÐµÐ»Ñ‹ Ð´Ð¸Ð¾Ð¿Ð°Ð·Ð¾Ð½Ð° Ð½Ðµ Ð´Ð¾Ð»Ð¶Ð½Ñ‹ ÑÐ¾Ð²Ð¿Ð°Ð´Ð°Ñ‚ÑŒ" << endl;
 
 	} while (minRand == maxRand);
 #endif // Fillrand
@@ -39,8 +39,8 @@ void main()
 
 	FillRand(arr, n);
 	Print(arr, n);
-	cout << "Ñóììà ýëåìåíòîâ ìàññèâà:" << Sum(arr, n) << endl; 
-	cout << "Ñðåäíåå-àðèôìåòè÷åñêîå ýëåìåíòîâ ìàññèâà:" << Avg(arr, n) << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°:" << Sum(arr, n) << endl; 
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ-Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°:" << Avg(arr, n) << endl;
 }   
 void FillRand(int arr[], const int n, int minRand, int maxRand)
 
@@ -94,7 +94,7 @@ int minValue(const int arr[], const int n)
 
 void shiftLeft(int arr[], const int n, int c)
 {
-	cout << "Íà ñêîëüêî ýëåìåíòîâ ñäâèíóòü ìàññèâ: "; cin >> c;
+	cout << "ÐÐ° ÑÐºÐ¾Ð»ÑŒÐºÐ¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² ÑÐ´Ð²Ð¸Ð½ÑƒÑ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð²: "; cin >> c;
 	for (int i = 0; i < c; i++)
 	{
 		int buffer = arr[0];
@@ -109,7 +109,7 @@ void shiftLeft(int arr[], const int n, int c)
 }
 void shiftRight(int arr[], const int n, int c)
 {
-	cout << "Íà ñêîëüêî ýëåìåíòîâ ñäâèíóòü ìàññèâ: "; cin >> c;
+	cout << "ÐÐ° ÑÐºÐ¾Ð»ÑŒÐºÐ¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² ÑÐ´Ð²Ð¸Ð½ÑƒÑ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð²: "; cin >> c;
 	for (int i = 0; i < c; i++)
 	{
 		int buffer = arr[n - 1];

@@ -1,10 +1,10 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
 int Diff(int a, int b);
 int Prod(int a, int b);
 double Quote(int a, int b);
-int Sum(int a, int b,int c=0); // Прототип функции (Объявление функции - function declaration)
+int Sum(int a, int b,int c=0); // РџСЂРѕС‚РѕС‚РёРї С„СѓРЅРєС†РёРё (РћР±СЉСЏРІР»РµРЅРёРµ С„СѓРЅРєС†РёРё - function declaration)
 long long int Factorial(int n);
 double Power(double a, int n);
 
@@ -18,8 +18,8 @@ void main()
     setlocale(LC_ALL, "");
 #ifdef CALC
     int a, b;
-    cout << "Введите значение с клавиатуры: "; cin >> a >> b;
-    int c = Sum(a, b); // использование функциии (Вызов функции - Function call) 
+    cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹: "; cin >> a >> b;
+    int c = Sum(a, b); // РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С„СѓРЅРєС†РёРёРё (Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРё - Function call) 
     cout << a << " + " << b << " = " << c << endl;
     cout << a << " - " << b << " = " << Diff(a, b) << endl;
     cout << a << " * " << b << " = " << Prod(a, b) << endl;
@@ -28,15 +28,15 @@ void main()
 
 #ifdef FACTORIAL
     int n;
-    cout << "Введите число вычисления факториала: "; cin >> n;
+    cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РІС‹С‡РёСЃР»РµРЅРёСЏ С„Р°РєС‚РѕСЂРёР°Р»Р°: "; cin >> n;
     cout << Factorial(n) << endl;
 #endif // FACTORIAL
 
 #ifdef POWER
-    int a; // основание степени
-    int n; // показатель степени
-    cout << "Введите основание степени: "; cin >> a;
-    cout << "Введите показатель степени: "; cin >> n;
+    int a; // РѕСЃРЅРѕРІР°РЅРёРµ СЃС‚РµРїРµРЅРё
+    int n; // РїРѕРєР°Р·Р°С‚РµР»СЊ СЃС‚РµРїРµРЅРё
+    cout << "Р’РІРµРґРёС‚Рµ РѕСЃРЅРѕРІР°РЅРёРµ СЃС‚РµРїРµРЅРё: "; cin >> a;
+    cout << "Р’РІРµРґРёС‚Рµ РїРѕРєР°Р·Р°С‚РµР»СЊ СЃС‚РµРїРµРЅРё: "; cin >> n;
     cout << a << " ^ " << " n " << " = " << Power(a, n) << endl;
     system("PAUSE");
     main();
@@ -44,7 +44,7 @@ void main()
 
 }
 
-int Sum(int a, int b) // Реализация функции (Определение функции - Function definition)
+int Sum(int a, int b) // Р РµР°Р»РёР·Р°С†РёСЏ С„СѓРЅРєС†РёРё (РћРїСЂРµРґРµР»РµРЅРёРµ С„СѓРЅРєС†РёРё - Function definition)
 {
     int c = a + b;
     return c;
@@ -56,12 +56,12 @@ int Diff(int a, int b)
 }
 int Prod(int a, int b)
 {
-    // Product - Произведение
+    // Product - РџСЂРѕРёР·РІРµРґРµРЅРёРµ
     return a * b;
 }
 double Quote(int a, int b)
 {
-    //Quotient - частное
+    //Quotient - С‡Р°СЃС‚РЅРѕРµ
     return (double)a / b;
 }
 
