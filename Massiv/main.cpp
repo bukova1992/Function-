@@ -1,10 +1,10 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 #define tab "\t"
 #define delimiter "\n----------------------------------------------------\n"
 
-const int ROWS = 3; // количество строк
-const int COLS = 4; // количество элементов строки
+const int ROWS = 3; // РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє
+const int COLS = 4; // РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё
 
 void FillRand(int arr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(double arr[], const int n, int minRand = 0, int maxRand = 100);
@@ -44,17 +44,17 @@ void main()
 	/*int minRand, maxRand;
 	do
 	{
-		cout << "Введите минимально возможное случайное число: "; cin >> minRand;
-		cout << "Введите максимально возможное случайное число: "; cin >> maxRand;
-		if (minRand == maxRand)cout << "Пределы диапазона не должны совпадать: " << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РјРёРЅРёРјР°Р»СЊРЅРѕ РІРѕР·РјРѕР¶РЅРѕРµ СЃР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ: "; cin >> minRand;
+		cout << "Р’РІРµРґРёС‚Рµ РјР°РєСЃРёРјР°Р»СЊРЅРѕ РІРѕР·РјРѕР¶РЅРѕРµ СЃР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ: "; cin >> maxRand;
+		if (minRand == maxRand)cout << "РџСЂРµРґРµР»С‹ РґРёР°РїР°Р·РѕРЅР° РЅРµ РґРѕР»Р¶РЅС‹ СЃРѕРІРїР°РґР°С‚СЊ: " << endl;
 	} while (minRand == maxRand);*/
 
 	FillRand(i_arr, n);
 	Print(i_arr, n);
-	cout << "Сумма элементов массива: " << Sum(i_arr, n) << endl;
-	cout << "Среднее арифметическое элементов массива: " << Avg(i_arr, n) << endl;
-	cout << "Минимальное значение массива: " << minValueIn(i_arr, n) << endl;
-	cout << "Максимальное значение массива: " << maxValueIn(i_arr, n) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(i_arr, n) << endl;
+	cout << "РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Avg(i_arr, n) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°: " << minValueIn(i_arr, n) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°: " << maxValueIn(i_arr, n) << endl;
 	int c = 0;
 	shiftLeft(i_arr, n, c);
 	shiftRight(i_arr, n, c);
@@ -64,9 +64,9 @@ void main()
 	double d_arr[D_SIZE];
 	FillRand(d_arr, D_SIZE);
 	Print(d_arr, D_SIZE);
-	cout << "Сумма элементов массива: " << Sum(d_arr, D_SIZE) << endl;
-	cout << "Минимальное значение массива: " << minValueIn(d_arr, n) << endl;
-	cout << "Максимальное значение массива: " << maxValueIn(d_arr, n) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(d_arr, D_SIZE) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°: " << minValueIn(d_arr, n) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°: " << maxValueIn(d_arr, n) << endl;
 	int d = 0;
 	shiftLeft(d_arr, n, d);
 	shiftRight(d_arr, n, d);
@@ -76,9 +76,9 @@ void main()
 
 	FillRand(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
-	cout << "Сумма элементов массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
-	cout << "Минимальное значение массива: " << minValueIn(i_arr_2, ROWS, COLS) << endl;
-	cout << "Максимальное значение массива: " << maxValueIn(i_arr_2, ROWS, COLS) << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(i_arr_2, ROWS, COLS) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°: " << minValueIn(i_arr_2, ROWS, COLS) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°: " << maxValueIn(i_arr_2, ROWS, COLS) << endl;
 
 }
 void FillRand(int arr[], const int n, int minRand, int maxRand)
@@ -115,7 +115,7 @@ void FillRand(double arr[], const int n, int minRand, int maxRand)
 }
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand, int maxRand)
 {
-	// заполнение двумерного массива случайными числами
+	// Р·Р°РїРѕР»РЅРµРЅРёРµ РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLS; j++)
@@ -140,7 +140,7 @@ void Print(const double arr[], const int n)
 }
 void Print(const int arr[ROWS][COLS], const int ROWS, const int COLS)
 {
-	// вывод двумерного массива на экран
+	// РІС‹РІРѕРґ РґРІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLS; j++)
@@ -259,7 +259,7 @@ int maxValueIn(const int arr[ROWS][COLS], const int ROWS, const int COLS)
 }
 void shiftLeft(int arr[], const int n, int c)
 {
-	cout << "На сколько элементов сдвинуть массив: "; cin >> c;
+	cout << "РќР° СЃРєРѕР»СЊРєРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃРґРІРёРЅСѓС‚СЊ РјР°СЃСЃРёРІ: "; cin >> c;
 	for (int i = 0; i < c; i++)
 	{
 		int buffer = arr[0];
@@ -274,7 +274,7 @@ void shiftLeft(int arr[], const int n, int c)
 }
 void shiftLeft(double arr[], const int n, int d)
 {
-	cout << "На сколько элементов сдвинуть массив: "; cin >> d;
+	cout << "РќР° СЃРєРѕР»СЊРєРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃРґРІРёРЅСѓС‚СЊ РјР°СЃСЃРёРІ: "; cin >> d;
 	for (int i = 0; i < d; i++)
 	{
 		int buffer = arr[0];
@@ -299,7 +299,7 @@ void shiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int c)
 }
 void shiftRight(int arr[], const int n, int c)
 {
-	cout << "На сколько элементов сдвинуть массив: "; cin >> c;
+	cout << "РќР° СЃРєРѕР»СЊРєРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃРґРІРёРЅСѓС‚СЊ РјР°СЃСЃРёРІ: "; cin >> c;
 	for (int i = 0; i < c; i++)
 	{
 		int buffer = arr[n - 1];
@@ -314,7 +314,7 @@ void shiftRight(int arr[], const int n, int c)
 }
 void shiftRight(double arr[], const int n, int d)
 {
-	cout << "На сколько элементов сдвинуть массив: "; cin >> d;
+	cout << "РќР° СЃРєРѕР»СЊРєРѕ СЌР»РµРјРµРЅС‚РѕРІ СЃРґРІРёРЅСѓС‚СЊ РјР°СЃСЃРёРІ: "; cin >> d;
 	for (int i = 0; i < d; i++)
 	{
 		int buffer = arr[n - 1];
