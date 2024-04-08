@@ -6,6 +6,7 @@ using namespace std;
 const int ROWS = 3; // количество строк
 const int COLS = 4; // количество элементов строки
 
+void Sort(const int arr_4, const int n);
 void FillRand(int arr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(double arr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
@@ -47,6 +48,23 @@ void main()
 	setlocale(LC_ALL, "");
 	const int n = 5;
 	int i_arr[n];
+	//int nums[] = { 1, 12, 6, 8, 10 };
+	//int size_nums = (sizeof(nums)/sizeof(nums[0]));
+	//int arr_4[] = {5, 4, 1, 2, 3};
+	//int n = sizeof(arr_4) / sizeof(arr_4[0]);
+	//for (int i = 0; i < n; i++) {
+	//	cout << arr_4[i] << " ";
+	//}
+	//cout << endl;
+	
+	//int n = sizeof(arr) / sizeof(arr[0]);
+
+	
+	//cout << "Array Before Sorting: ";
+	//for (int i = 0; i < n; i++) {
+	//	cout << i_arr[i] << " ";
+	//}
+	//cout << endl;
 	/*int minRand, maxRand;
 	do
 	{
@@ -79,6 +97,7 @@ void main()
 	cout << delimiter << endl;
 
 	int i_arr_2[ROWS][COLS];
+	int i_arr_4[ROWS][COLS];
 	FillRand(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
 	cout << "Сумма элементов массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
@@ -88,10 +107,13 @@ void main()
 	double i_arr_3[ROWS][COLS];
 	FillRand(i_arr_3, ROWS, COLS);
 	Print(i_arr_3, ROWS, COLS);
+	//Sort(arr_4, arr_4 + n);
 	cout << "Сумма элементов массива: " << Sum(i_arr_3, ROWS, COLS) << endl;
 	cout << "Минимальное значение массива: " << minValueIn(i_arr_3, ROWS, COLS) << endl;
 	cout << "Максимальное значение массива: " << maxValueIn(i_arr_3, ROWS, COLS) << endl;
-
+	cout << "Перед массивом получается: \n";
+	cout << "Перед сортировкой  получится массив: \n";
+	cout << "После сортировки получится массив: \n";
 }
 void FillRand(int arr[], const int n, int minRand, int maxRand)
 {
@@ -397,4 +419,19 @@ void shiftRight(double arr[], const int n, int d)
 	Print(arr, n);
 
 }
+//void Sort(const int arr_4, const int n)
+//{
+//		for (int i = 0; i < n; i++)
+//		{
+//			int buffer = arr_4[n];
+//			for (int j = n; j < n; j++)
+//			{
+//				if (arr_4[i] > arr_4[j])
+//{
+//					int buffer = arr_4[i];
+//					arr_4[0] = buffer;
+//}
+//}
+//}
+
 

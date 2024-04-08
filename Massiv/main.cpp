@@ -36,6 +36,8 @@ void shiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int c);
 void shiftRight(int arr[], const int n, int c);
 void shiftRight(double arr[], const int n, int c);
 
+void Sort(int arr[], const int n);
+
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -55,6 +57,8 @@ void main()
 	cout << "Среднее арифметическое элементов массива: " << Avg(i_arr, n) << endl;
 	cout << "Минимальное значение массива: " << minValueIn(i_arr, n) << endl;
 	cout << "Максимальное значение массива: " << maxValueIn(i_arr, n) << endl;
+	Sort(i_arr, n); 
+	Print(i_arr, n);
 	int c = 0;
 	shiftLeft(i_arr, n, c);
 	shiftRight(i_arr, n, c);
@@ -327,5 +331,22 @@ void shiftRight(double arr[], const int n, int d)
 	Print(arr, n);
 
 }
-
+void Sort(int arr[], const int n)
+{
+	for (int i = 0; i < n; i++) //счётчик массива выбирает элемент массива 
+	{
+		int buffer = arr[i];
+		for (int j = i + 1; j < n; j++) //счётчик массива перебивает оставшиеся элементы оставшиеся элементы массива 
+		{
+			//arr[i] //выбранный элемент 
+			//arr[j] //перебираемый элемент 
+			if (arr[j] < arr[i])
+			{
+				int buffer = arr[i];
+				arr[i] = arr[j];
+				arr[j] = buffer;
+			}
+		}
+	}
+}
 
