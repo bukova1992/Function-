@@ -37,6 +37,7 @@ void shiftRight(int arr[], const int n, int c);
 void shiftRight(double arr[], const int n, int c);
 
 void Sort(int arr[], const int n);
+void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void main()
 {
@@ -57,8 +58,6 @@ void main()
 	cout << "Среднее арифметическое элементов массива: " << Avg(i_arr, n) << endl;
 	cout << "Минимальное значение массива: " << minValueIn(i_arr, n) << endl;
 	cout << "Максимальное значение массива: " << maxValueIn(i_arr, n) << endl;
-	Sort(i_arr, n); 
-	Print(i_arr, n);
 	int c = 0;
 	shiftLeft(i_arr, n, c);
 	shiftRight(i_arr, n, c);
@@ -77,13 +76,13 @@ void main()
 	cout << delimiter << endl;
 
 	int i_arr_2[ROWS][COLS];
-
 	FillRand(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
 	cout << "Сумма элементов массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
 	cout << "Минимальное значение массива: " << minValueIn(i_arr_2, ROWS, COLS) << endl;
 	cout << "Максимальное значение массива: " << maxValueIn(i_arr_2, ROWS, COLS) << endl;
-
+	Sort(i_arr_2, ROWS, COLS);
+	Print(i_arr_2, ROWS, COLS);
 }
 void FillRand(int arr[], const int n, int minRand, int maxRand)
 {
@@ -134,6 +133,7 @@ void Print(const int arr[], const int n)
 	{
 		cout << arr[i] << tab;
 	}
+	cout << endl;
 }
 void Print(const double arr[], const int n)
 {
@@ -141,6 +141,7 @@ void Print(const double arr[], const int n)
 	{
 		cout << arr[i] << tab;
 	}
+	cout << endl;
 }
 void Print(const int arr[ROWS][COLS], const int ROWS, const int COLS)
 {
@@ -297,7 +298,7 @@ void shiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int c)
 	{
 		for (int k = 0; k < COLS; k++)
 		{
-			
+
 		}
 	}
 }
@@ -345,6 +346,40 @@ void Sort(int arr[], const int n)
 				int buffer = arr[i];
 				arr[i] = arr[j];
 				arr[j] = buffer;
+			}
+		}
+	}
+}
+void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = j + 1; k < ROWS; k++)
+			{
+				//arr[i][j]-выбранный элемент
+				//arr[i][k]-перебираемый элемент
+				if (arr[i][k] < arr[i][j])
+				{
+					int buffer = arr[i][k];
+					arr[i][j] = arr[i][k];
+					arr[i][k] = buffer;
+				}
+			}
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = j+1; l < COLS; l++)
+				{
+					//arr[i][j] - выбранный элемент
+					//arr[k][l] - перебираемый элемент
+					if (arr[i][j] < arr[k][l])
+					{
+						int buffer = arr[i][j];
+						arr[i][j] = arr[k][l];
+						arr[k][l] = buffer;
+					}
+				}
 			}
 		}
 	}
