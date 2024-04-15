@@ -38,12 +38,14 @@ void shiftRight(double arr[], const int n, int c);
 
 void Sort(int arr[], const int n);
 void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS);
+void Unique (int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void main()
 {
 	setlocale(LC_ALL, "");
 	const int n = 5;
 	int i_arr[n];
+	
 	/*int minRand, maxRand;
 	do
 	{
@@ -81,8 +83,11 @@ void main()
 	cout << "Сумма элементов массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
 	cout << "Минимальное значение массива: " << minValueIn(i_arr_2, ROWS, COLS) << endl;
 	cout << "Максимальное значение массива: " << maxValueIn(i_arr_2, ROWS, COLS) << endl;
+	Unique(i_arr_2, ROWS, COLS);
+	cout << "Ввести случайное значение массива: " << maxValueIn(i_arr_2, ROWS, COLS) << endl;
 	Sort(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
+
 }
 void FillRand(int arr[], const int n, int minRand, int maxRand)
 {
@@ -369,7 +374,7 @@ void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 			}
 			for (int k = i; k < ROWS; k++)
 			{
-				for (int l = j+1; l < COLS; l++)
+				for (int l = j + 1; l < COLS; l++)
 				{
 					//arr[i][j] - выбранный элемент
 					//arr[k][l] - перебираемый элемент
@@ -383,5 +388,17 @@ void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 			}
 		}
 	}
+	void Unique(int arr[ROWS][COLS], const int ROWS, const int COLS)
+
+		for (int i = 0; i < ROWS; i++)
+		{
+			for (int j = 0; j < COLS; j++)
+			{
+				arr[i][j] = Rand() % 9;
+			    cout << arr[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << endl;
 }
 
