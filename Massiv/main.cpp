@@ -1,7 +1,9 @@
 ﻿#include<iostream>
-using namespace std;
+using namespace std; 
+
 #define tab "\t"
 #define delimiter "\n----------------------------------------------------\n"
+
 
 const int ROWS = 3; // количество строк
 const int COLS = 4; // количество элементов строки
@@ -87,7 +89,7 @@ void main()
 	cout << "Ввести случайное значение массива: " << maxValueIn(i_arr_2, ROWS, COLS) << endl;
 	Sort(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
-
+	void Unique(int arr[ROWS][COLS], const int ROWS, const int COLS);
 }
 void FillRand(int arr[], const int n, int minRand, int maxRand)
 {
@@ -394,11 +396,25 @@ void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 		{
 			for (int j = 0; j < COLS; j++)
 			{
-				arr[i][j] = Rand() % 9;
-			    cout << arr[i][j] << "\t";
+				bool unique;
+				do
+				{
+					arr[i][j] = rand() % (ROWS * COLS);
+					unique = true;
+					for (int k = 0; k <= i; k++)
+					{
+						for (int 1 = 0; 1 < (k == i ? j : COLS); 1++)
+						{
+							if (arr[i][j] == arr[k][1])
+							{
+								unique = false;
+								break;
+							}
+						}
+						if (!unique)break;
+					}
+				} while (!unique);
+			}
 		}
-		cout << endl;
-	}
-	cout << endl;
 }
 
