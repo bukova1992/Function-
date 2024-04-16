@@ -403,9 +403,9 @@ void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 					unique = true;
 					for (int k = 0; k <= i; k++)
 					{
-						for (int 1 = 0; 1 < (k == i ? j : COLS); 1++)
+						for (int l = 0; l < (k == i ? j : COLS); l++)
 						{
-							if (arr[i][j] == arr[k][1])
+							if (arr[i][j] == arr[k][l])
 							{
 								unique = false;
 								break;
